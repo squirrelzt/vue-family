@@ -7,25 +7,22 @@
 </head>
 <body>
     <div id="app">
-        {{ content }}
+        <input type="text"/>
+        <button>提交</button>
+        <ul>
+            <li v-for="item in list">{{item}}</li>
+        </ul>
     </div>
     <script type="text/javascript">
-        // var dom = document.getElementById('app');
-        // dom.innerHTML = 'Hello World';
-        // setTimeout(function () {
-        //     dom.innerHTML = 'bye world'
-        // }, 2000);
-
         var app = new Vue({
-           el: '#app',
-           data: {
-               content: 'hello world vue.js'
-           }
-        });
-
-        setTimeout(function () {
-            app.$data.content = 'bye world';
-        }, 2000)
+            el: '#app',
+            data: {
+                list: [
+                    '第一课的内容',
+                    '第二课的内容'
+                ]
+            }
+        })
     </script>
 </body>
 </html>
