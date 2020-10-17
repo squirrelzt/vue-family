@@ -22,7 +22,9 @@
             },
             methods: {
                 handleBtnClick: function () {
-                    console.log('click')
+                    console.log(this.inputValue)
+                    this.list.push(this.inputValue)
+                    this.inputValue = ''
                 }
             }
         })
