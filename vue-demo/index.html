@@ -7,7 +7,7 @@
 </head>
 <body>
     <div id="app">
-        <input type="text"/>
+        <input type="text" v-model="inputValue"/>
         <button v-on:click="handleBtnClick">提交</button>
         <ul>
             <li v-for="item in list">{{item}}</li>
@@ -17,14 +17,12 @@
         var app = new Vue({
             el: '#app',
             data: {
-                list: [
-                    '第一课的内容',
-                    '第二课的内容'
-                ]
+                list: [],
+                inputValue: ''
             },
             methods: {
                 handleBtnClick: function () {
-                    alert('click')
+                    console.log('click')
                 }
             }
         })
