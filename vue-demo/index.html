@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Hello World</title>
@@ -8,7 +8,7 @@
 <body>
     <div id="app">
         <input type="text"/>
-        <button>提交</button>
+        <button v-on:click="handleBtnClick">提交</button>
         <ul>
             <li v-for="item in list">{{item}}</li>
         </ul>
@@ -21,6 +21,11 @@
                     '第一课的内容',
                     '第二课的内容'
                 ]
+            },
+            methods: {
+                handleBtnClick: function () {
+                    alert('click')
+                }
             }
         })
     </script>
