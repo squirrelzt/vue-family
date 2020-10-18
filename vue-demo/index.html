@@ -6,25 +6,25 @@
     <script src="./vue.js"></script>
 </head>
 <body>
-    <div id="app">
-        <input type="text" v-model="inputValue"/>
-        <button v-on:click="handleBtnClick">提交</button>
+    <div id="root">
+        <input type="text" v-model="todoValue"/>
+        <button @click="handleBtnClick">提交</button>
         <ul>
             <li v-for="item in list">{{item}}</li>
         </ul>
     </div>
     <script type="text/javascript">
         var app = new Vue({
-            el: '#app',
+            el: '#root',
             data: {
                 list: [],
-                inputValue: ''
+                todoValue: ''
             },
             methods: {
                 handleBtnClick: function () {
-                    console.log(this.inputValue)
-                    this.list.push(this.inputValue)
-                    this.inputValue = ''
+                    console.log(this.todoValue)
+                    this.list.push(this.todoValue)
+                    this.todoValue = ''
                 }
             }
         })
