@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+<div id="root" @click="handleClick">
+    {{ message }}
+</div>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#root',
+        data: {
+            message: 'hello world'
+        },
+        methods: {
+            handleClick: function () {
+                console.log('hello')
+            }
+        }
+    })
+</script>
+</body>
+</html>
