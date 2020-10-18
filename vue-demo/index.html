@@ -11,12 +11,15 @@
         <button @click="handleBtnClick">提交</button>
         <ul>
 <!--            <li v-for="item in list">{{item}}</li>-->
-            <todo-item v-for="item in list"></todo-item>
+            <todo-item v-bind:content="item"
+                       v-for="item in list">
+            </todo-item>
         </ul>
     </div>
     <script type="text/javascript">
         Vue.component('TodoItem', {
-            template: '<li>todo item</li>'
+            props: ['content'],
+            template: '<li>{{content}}</li>'
         })
         var app = new Vue({
             el: '#root',
