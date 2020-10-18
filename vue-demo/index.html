@@ -17,12 +17,19 @@
         </ul>
     </div>
     <script type="text/javascript">
-        Vue.component('TodoItem', {
+        // Vue.component('TodoItem', {
+        //     props: ['content'],
+        //     template: '<li>{{content}}</li>'
+        // })
+        var TodoItem = {
             props: ['content'],
             template: '<li>{{content}}</li>'
-        })
+        }
         var app = new Vue({
             el: '#root',
+            components: {
+                TodoItem: TodoItem
+            },
             data: {
                 list: [],
                 todoValue: ''
